@@ -1,7 +1,7 @@
 const sql = require("mssql");
 const { config } = require("./dbConfig.js");
-const accountSid = process.env.accountSid;
-const authToken = process.env.authToken;
+const accountSid = process.env.accountSid;  //Edit This
+const authToken = process.env.authToken;   //Edit This
 const client = require("twilio")(accountSid, authToken);
 
 const sendMessages = async () => {
@@ -25,14 +25,14 @@ const sendMessages = async () => {
       );
 
       const mediaUrls = fileNames.map(
-        (fileName) => `http://103.142.175.92:3000/media/${fileName}.pdf`
+        (fileName) => `http://domain-name-here/folder-name/${fileName}.pdf`   //Edit This
       );
       console.log(mediaUrls);
 
       try {
         const sentMessage = await client.messages.create({
           body: MessageBody,
-          from: "whatsapp:+14155238886",
+          from: "whatsapp:+twilio mobile no ",  //Edit This put actual twilio number
           to: `whatsapp:+${RecipientMobile}`,
           mediaUrl: mediaUrls,
         });
