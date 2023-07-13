@@ -1,8 +1,9 @@
 const config = {
-    server: 'DESKTOP-MQF1IG5\\MSSQLSERVER',
-    user: 'sa',
-    password: 'Pa$$w0rd',
-    database: 'Tasker',
+    server: 'server-name',   //Edit This
+    user: 'sa',   //Edit This
+    password: 'server-password',  //Edit This
+    database: 'database-name',  //Edit This
+    driver: 'msnodesqlv8',   //Edit This
     options: {
       trustServerCertificate: true,
       trustedConnection: true
