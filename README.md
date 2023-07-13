@@ -74,6 +74,9 @@ In the project folder navigate to the `.env` file and change the `AccountSid` an
 
 In project folder navigate to the `dbConfig.js` file. In it if you are using latest version of `MSSQL` remove the `driver`line. and change the variable for your own database.
 
+## Updating media file Link
+
+Navigate and open the `app.js` file and then go to `line 28` in the `filename` part replace the link with open where you will store the file.
 
 ## Creating a Service for the Bot
 
@@ -106,3 +109,25 @@ Then your Service should start Automatically if not go to `Windows Services` and
 nodemon app.js 
 
 ```
+## Authors
+
+- [@HritikPawar](https://www.hritikpawar.netlify.app)
+
+
+## FAQ
+
+#### Q1: How does the WhatsApp Message Sending Bot work?
+A1: The WhatsApp Message Sending Bot is designed to automate the process of sending WhatsApp messages using the Twilio API. It retrieves messages from a SQL database table called "WhatsAppMessage" and sends them to recipients. The bot keeps track of the message sending status in a separate table called "WhatsAppMessageLog". It supports media attachments and handles errors during the message sending process.
+
+#### Q2: What technologies are used in this project?
+A2: The WhatsApp Message Sending Bot is built using Twilio, Node.js, and SQL. It utilizes the Twilio API for sending WhatsApp messages. Node.js is used as the runtime environment, and the bot is implemented using the Express framework. The SQL database is accessed using the mssql library.
+
+
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
